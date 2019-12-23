@@ -16,6 +16,7 @@ jobs:
         run: |
           cd package
           mkdir openwrt-packages
+          git clone https://github.com/RealKiro/Actions-OpenWrt.git myself
           cd openwrt-packages
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           git clone https://github.com/Ameykyl/luci-app-koolproxyR
