@@ -20,31 +20,31 @@ msgid "Refresh interval :"
 msgstr "刷新间隔："
 
 msgid "Screen data refresh interval."
-msgstr "屏幕数据刷新间隔"
+msgstr "屏幕数据刷新间隔。"
 
-msgid "check city from ip :"
-msgstr "IP定位 :"
+msgid "Check city from ip"
+msgstr "IP定位"
 
-msgid "check city from local ip"
-msgstr "通过IP得到城市信息"
+msgid "Check city from local ip."
+msgstr "通过IP得到城市信息。"
 
-msgid "city :"
+msgid "City :"
 msgstr "城市:"
 
-msgid "please input right city name"
-msgstr "请输入准确的城市名称:"
+msgid "Weather update interval :"
+msgstr "天气更新时间间隔:"
 
-msgid "weather update_time :"
-msgstr "天气更新时间间隔 :"
+msgid "Private Key :"
+msgstr "私钥:"
 
 msgid "Hide Wireless password"
 msgstr "隐藏无线密码"
 
-msgid "Display CPU temperature"
-msgstr "显示 CPU 温度"
+msgid "Display More Info"
+msgstr "显示更多信息"
 
-msgid "The first page shows the CPU temperature."
-msgstr "第一页显示 CPU 温度"
+msgid "The first page shows more information including: CPU temprature, Load, RAM useage, uptime, etc."
+msgstr "第一页显示更多信息，包括：CPU温度、负载，内存用量，运行时间等。"
 
 msgid "Test"
 msgstr "测试"
@@ -69,6 +69,9 @@ msgstr "设备"
 
 msgid "Icon"
 msgstr "图标"
+
+msgid "1 s"
+msgstr "1 秒"
 
 msgid "2 s"
 msgstr "2 秒"
@@ -99,6 +102,18 @@ msgstr "30 分"
 
 msgid "60 m"
 msgid "60 分"
+
+msgid "off"
+msgid "关闭"
+
+msgid "1 h"
+msgid "1 小时"
+
+msgid "4 h"
+msgid "4 小时"
+
+msgid "12 h"
+msgid "12 小时"
 
 msgid "Auto"
 msgstr "自动"
