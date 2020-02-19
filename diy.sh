@@ -55,9 +55,12 @@ git clone https://github.com/project-openwrt/luci-app-ssr-plus-Jo.git package/mi
 git clone https://github.com/project-openwrt/luci-app-frps.git package/mine/luci-app-frps
 
 # luci-app-koolddns
-wget https://github.com/Ameykyl/openwrt18.06/blob/master/package/diy/luci-app-koolddns.tar.xz 
-xz -d luci-app-koolddns.tar.xz
-tar -xvf  luci-app-koolddns.tar
+# wget https://github.com/Ameykyl/openwrt18.06/blob/master/package/diy/luci-app-koolddns.tar.xz 
+# xz -d luci-app-koolddns.tar.xz
+# tar -xvf  luci-app-koolddns.tar
+
+#luci-app-koolddns
+git clone https://github.com/xrouterservice/luci-app-koolddns.git package/mine/luci-app-koolddns
 
 # luci-app-aliddns
 git clone https://github.com/honwen/luci-app-aliddns.git package/mine/luci-app-aliddns
