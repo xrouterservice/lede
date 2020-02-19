@@ -7,7 +7,7 @@
 # https://github.com/RealKiro/Actions-OpenWrt/blob/r619ac/diy.sh
 #=================================================
 # Modify default IP
-sed -i 's/192.168.1.1/192.168.0.1/g' package/base-files/files/bin/config_generate
+#sed -i 's/192.168.1.1/192.168.0.1/g' package/base-files/files/bin/config_generate
 
 # 更改默认主题为Argon
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
