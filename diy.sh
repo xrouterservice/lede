@@ -49,12 +49,12 @@ git clone https://github.com/destan19/OpenAppFilter.git package/mine/OpenAppFilt
 git clone https://github.com/ElonH/Rclone-OpenWrt.git package/mine/Rclone-OpenWrt
 
 # ssr-plus-Jo
-git clone https://github.com/project-openwrt/luci-app-ssr-plus-Jo.git
+git clone https://github.com/project-openwrt/luci-app-ssr-plus-Jo.git package/mine/luci-app-ssr-plus-Jo
 
 # luci-app-frps
-git clone https://github.com/project-openwrt/luci-app-frps.git
+git clone https://github.com/project-openwrt/luci-app-frps.git package/mine/luci-app-frps
 
 #
-wget https://github.com/Ameykyl/openwrt18.06/blob/master/package/diy/luci-app-koolddns.tar.xz
-xz -d luci-app-koolddns.tar.xz  //先解压xz 
-tar -xvf  luci-app-koolddns.tar //再解压tar
+wget https://github.com/Ameykyl/openwrt18.06/blob/master/package/diy/luci-app-koolddns.tar.xz package/mine/luci-app-koolddns
+xz -d luci-app-koolddns.tar.xz
+tar -xvf  luci-app-koolddns.tar
