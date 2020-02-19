@@ -47,3 +47,9 @@ git clone https://github.com/destan19/OpenAppFilter.git package/mine/OpenAppFilt
 
 # Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt.git package/mine/Rclone-OpenWrt
+
+# ssr-plus-Jo
+git clone https://github.com/project-openwrt/luci-app-ssr-plus-Jo.git
+
+# luci-app-frps
+git clone https://github.com/project-openwrt/luci-app-frps.git
