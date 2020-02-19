@@ -53,3 +53,8 @@ git clone https://github.com/project-openwrt/luci-app-ssr-plus-Jo.git
 
 # luci-app-frps
 git clone https://github.com/project-openwrt/luci-app-frps.git
+
+#
+wget https://github.com/Ameykyl/openwrt18.06/blob/master/package/diy/luci-app-koolddns.tar.xz
+xz -d luci-app-koolddns.tar.xz  //先解压xz 
+tar -xvf  luci-app-koolddns.tar //再解压tar
