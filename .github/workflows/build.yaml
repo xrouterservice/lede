@@ -1,6 +1,16 @@
 name: Build
 
 on: [push]
+env:
+  # REPO_URL: https://github.com/coolsnowwolf/lede
+  # REPO_BRANCH: master
+  # CONFIG_FILE: Lean_r619ac.config
+  DIY_SH: diy.sh
+  FREE_UP_DISK: false
+  SSH_ACTIONS: false
+  UPLOAD_BIN_DIR: false
+  UPLOAD_FIRMWARE: true
+  TZ: Asia/Shanghai
 
 jobs:
   k3:
@@ -26,6 +36,16 @@ jobs:
           git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
           # git clone https://github.com/Ameykyl/luci-app-koolproxyR
           git clone https://github.com/rosywrt/luci-theme-rosy
+          
+      - name: Load custom configuration
+        run: |
+          [ -e files ] && mv files openwrt/files
+          [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
+          chmod +x $DIY_SH
+          cd openwrt
+          ../$DIY_SH
+          make defconfig
+        
       - name: Prepare Build
         run: |
           ./scripts/feeds update -a
