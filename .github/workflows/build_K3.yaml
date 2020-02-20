@@ -1,6 +1,18 @@
 name: Build_K3
 
 #on: [push]
+#       watch:
+#    types: [started]
+
+#on: 
+  push:
+    branches: 
+      - master
+  #schedule:
+  #  - cron: 0 21 * * *
+  watch:
+    types: [started]
+    
 env:
   # REPO_URL: https://github.com/coolsnowwolf/lede
   # REPO_BRANCH: master
@@ -58,5 +70,5 @@ jobs:
       - name: Upload Image
         uses: actions/upload-artifact@v1
         with:
-          name: lede-k3-${{ github.sha }}
+          name: lede-k3-AlexFast-${{ github.sha }}
           path: bin
