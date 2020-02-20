@@ -68,3 +68,6 @@ git clone https://github.com/honwen/luci-app-aliddns.git package/mine/luci-app-a
 
 # openclash
 git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
+
+#luci-app-dnspod
+git clone https://github.com/bdhjiajia/luci-app-dnspod.git package/mine/luci-app-dnspod
