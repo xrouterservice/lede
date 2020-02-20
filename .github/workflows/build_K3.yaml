@@ -4,7 +4,7 @@ name: Build_K3
 #       watch:
 #    types: [started]
 
-#on: 
+on: 
   push:
     branches: 
       - master
