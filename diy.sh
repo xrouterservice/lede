@@ -22,7 +22,8 @@ git clone https://github.com/lisaac/luci-app-diskman.git package/mine/luci-app-d
 mkdir -p package/mine/parted && cp -i package/mine/luci-app-diskman/Parted.Makefile package/mine/parted/Makefile
 
 # KPR plus+
-git clone https://github.com/project-openwrt/luci-app-koolproxyR.git package/mine/luci-app-koolproxyR
+# git clone https://github.com/project-openwrt/luci-app-koolproxyR.git package/mine/luci-app-koolproxyR
+git clone https://github.com/jefferymvp/luci-app-koolproxyR.git package/mine/luci-app-koolproxyR
 
 # Server酱
 git clone https://github.com/tty228/luci-app-serverchan.git package/mine/luci-app-serverchan
@@ -34,8 +35,8 @@ git clone https://github.com/project-openwrt/FileBrowser.git package/mine/FileBr
 git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic.git package/mine/luci-app-unblockneteasemusic
 
 # 网易云音乐GoLang版本
-git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-go.git package/mine/luci-app-unblockneteasemusic-go
-
+# git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-go.git package/mine/luci-app-unblockneteasemusic-go
+git clone https://github.com/cnsilvan/luci-app-unblockneteasemusic.git package/mine/luci-app-unblockneteasemusic-go
 # 网易云音乐mini
 # git clone https://github.com/project-openwrt/luci-app-unblockneteasemusic-mini.git package/mine/luci-app-unblockneteasemusic-mini
 
@@ -64,3 +65,6 @@ git clone https://github.com/xrouterservice/luci-app-koolddns.git package/mine/l
 
 # luci-app-aliddns
 git clone https://github.com/honwen/luci-app-aliddns.git package/mine/luci-app-aliddns
+
+# openclash
+git clone https://github.com/vernesong/OpenClash.git
