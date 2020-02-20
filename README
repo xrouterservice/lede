@@ -21,6 +21,15 @@
 #![Build_x86](https://github.com/xrouterservice/lede/workflows/Build_x86/badge.svg)
 
 Welcome to Lean's  git source of OpenWrt and packages
+# Actions Status
+
+- `R619AC(竞斗云2.0_128M)` Branch:
+  - Building Status: ![OpenWrt-R619AC](https://github.com/RealKiro/Actions-OpenWrt/workflows/OpenWrt-R619AC/badge.svg?branch=master)
+  - Download Firmwares: [Actions/R619AC](https://github.com/RealKiro/Actions-OpenWrt/actions?query=is%3Asuccess+branch%3Amaster).
+
+- `Newifi3` Branch:
+  - Building Status: ![OpenWrt-Newifi3](https://github.com/RealKiro/Actions-OpenWrt/workflows/OpenWrt-Newifi3/badge.svg?branch=newifi3)
+  - Download Firmwares: [Actions/Newifi3](https://github.com/RealKiro/Actions-OpenWrt/actions?query=is%3Asuccess+branch%3Anewifi3).
 
 中文：如何编译自己需要的 OpenWrt 固件
 
