@@ -51,7 +51,7 @@ jobs:
           ./scripts/feeds install -a
           cp x86.config .config
           make defconfig
-          # sed -i 's|^TARGET_|# TARGET_|g; s|# TARGET_DEVICES += phicomm-k3|TARGET_DEVICES += phicomm-k3|' target/linux/bcm53xx/image/Makefile
+          # sed -i 's|^TARGET_|# TARGET_|g; s|# TARGET_DEVICES += x86|TARGET_DEVICES += x86|' target/linux/x86/image/Makefile
       - name: Build Image
         run: make -j$(nproc) V=s
       - name: Upload Image
