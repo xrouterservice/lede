@@ -67,4 +67,4 @@ git clone https://github.com/xrouterservice/luci-app-koolddns.git package/mine/l
 git clone https://github.com/honwen/luci-app-aliddns.git package/mine/luci-app-aliddns
 
 # openclash
-git clone https://github.com/vernesong/OpenClash.git
+git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
