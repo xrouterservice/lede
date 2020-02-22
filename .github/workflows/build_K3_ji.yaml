@@ -1,15 +1,11 @@
-name: Build_K3
-
-#on: [push]
-#       watch:
-#    types: [started]
+name: Build K3_diy_ji
 
 on: 
   #push:
   #  branches: 
   #    - master
-  #schedule:
-  #  - cron: 0 21 * * *
+  schedule:
+    - cron: 0 21 * * *
   watch:
     types: [started]
     
@@ -18,14 +14,9 @@ env:
   # REPO_BRANCH: master
   # CONFIG_FILE: Lean_r619ac.config
   DIY_SH: diy.sh
-  FREE_UP_DISK: false
-  SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: false
-  UPLOAD_FIRMWARE: true
-  TZ: Asia/Shanghai
 
 jobs:
-  k3:
+  k3-diy-ji:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
@@ -34,35 +25,22 @@ jobs:
           export FORCE_UNSAFE_CONFIGURE=1
           sudo apt-get update
           sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler wget
-      - name: Set 3rd packages
-        run: |
-          # git clone https://github.com/RealKiro/Actions-OpenWrt.git package/mine/Actions-OpenWrt
-          # git clone https://github.com/frainzy1477/luci-app-ssr-plus-jo.git package/mine/luci-app-ssr-plus-jo
-          # ssr-plus-jo
-          # git clone https://github.com/Ameykyl/luci-app-ssr-plus-jo.git package/mine/luci-app-ssr-plus-jo/luci-app-ssr-plus-jo
-          # git clone https://github.com/Ameykyl/my.git package/mine/luci-app-ssr-plus-jo/my
-
-          cd package
-          mkdir openwrt-packages
-          cd openwrt-packages
-          git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
-          # git clone https://github.com/Ameykyl/luci-app-koolproxyR
-          git clone https://github.com/rosywrt/luci-theme-rosy
-          
+  
       - name: Load custom configuration
         run: |
           # [ -e files ] && mv files openwrt/files
           # [ -e $CONFIG_FILE ] && mv $CONFIG_FILE openwrt/.config
           chmod +x $DIY_SH
           # cd lede
-          #./$DIY_SH
-          make defconfig
-        
+          ./$DIY_SH
+          # make defconfig
+      
       - name: Prepare Build
         run: |
+          ./scripts/feeds clean
           ./scripts/feeds update -a
           ./scripts/feeds install -a
-          cp k3.config .config
+          cp k3diy.config .config
           make defconfig
           sed -i 's|^TARGET_|# TARGET_|g; s|# TARGET_DEVICES += phicomm-k3|TARGET_DEVICES += phicomm-k3|' target/linux/bcm53xx/image/Makefile
       - name: Build Image
@@ -70,5 +48,5 @@ jobs:
       - name: Upload Image
         uses: actions/upload-artifact@v1
         with:
-          name: lede-k3-AlexFast-${{ github.sha }}
+          name: lede-k3-ji-${{ github.sha }}
           path: bin
