@@ -7,7 +7,7 @@
 # https://github.com/RealKiro/Actions-OpenWrt/blob/r619ac/diy.sh
 #=================================================
 # Modify default IP
-#sed -i 's/192.168.1.1/192.168.0.1/g' package/base-files/files/bin/config_generate
+sed -i 's/192.168.1.1/192.168.4.1/g' package/base-files/files/bin/config_generate
 
 # 更改默认主题为Argon
 # sed -i 's/luci-theme-bootstrap/luci-theme-argon/g' package/feeds/luci/luci/Makefile
@@ -49,8 +49,9 @@ git clone https://github.com/destan19/OpenAppFilter.git package/mine/OpenAppFilt
 # Rclone-OpenWrt
 git clone https://github.com/ElonH/Rclone-OpenWrt.git package/mine/Rclone-OpenWrt
 
-# ssr-plus-Jo
-git clone https://github.com/project-openwrt/luci-app-ssr-plus-Jo.git package/mine/luci-app-ssr-plus-Jo
+# ssr-plus-Jo 被Vssr替代
+#git clone https://github.com/project-openwrt/luci-app-ssr-plus-Jo.git package/mine/luci-app-ssr-plus-Jo
+#git clone https://github.com/Leo-Jo/luci-app-ssr-plus-jo.git package/mine/luci-app-ssr-plus-leo-Jo
 
 # luci-app-frps
 git clone https://github.com/project-openwrt/luci-app-frps.git package/mine/luci-app-frps
@@ -70,4 +71,9 @@ git clone https://github.com/honwen/luci-app-aliddns.git package/mine/luci-app-a
 git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
 
 #luci-app-dnspod
-git clone https://github.com/bdhjiajia/luci-app-dnspod.git package/mine/luci-app-dnspod
+# git clone https://github.com/bdhjiajia/luci-app-dnspod.git package/mine/luci-app-dnspod
+
+#luci-app-vssr
+git clone https://github.com/Leo-Jo/luci-app-vssr.git package/mine/luci-app-vssr
+#vssr的依赖包 需要的依赖有python3-maxminddb libmaxminddb 请自行添加 建议搭配argon theme
+git clone https://github.com/Leo-Jo-My/my package/mine/luci-app-vssr-lib 
