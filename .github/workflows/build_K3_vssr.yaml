@@ -1,4 +1,4 @@
-name: Build K3_diy_ji
+name: Build K3_diy_vssr
 
 on: 
   #push:
@@ -16,7 +16,7 @@ env:
   DIY_SH: diy.sh
 
 jobs:
-  k3-diy-ji:
+  k3-diy-vssr:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
@@ -48,5 +48,5 @@ jobs:
       - name: Upload Image
         uses: actions/upload-artifact@v1
         with:
-          name: lede-k3-ji-${{ github.sha }}
+          name: lede-k3-vssr-${{ github.sha }}
           path: bin
