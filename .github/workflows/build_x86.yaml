@@ -1,19 +1,22 @@
 name: Build_x86
 
-# on: [push]
+on: 
+  #push:
+  #  branches: 
+  #    - master
+  schedule:
+    - cron: 0 21 * * *
+  watch:
+    types: [started]
+    
 env:
   # REPO_URL: https://github.com/coolsnowwolf/lede
   # REPO_BRANCH: master
   # CONFIG_FILE: Lean_r619ac.config
   DIY_SH: diy.sh
-  FREE_UP_DISK: false
-  SSH_ACTIONS: false
-  UPLOAD_BIN_DIR: false
-  UPLOAD_FIRMWARE: true
-  TZ: Asia/Shanghai
 
 jobs:
-  x86:
+  x86-diy:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
@@ -22,20 +25,7 @@ jobs:
           export FORCE_UNSAFE_CONFIGURE=1
           sudo apt-get update
           sudo apt-get -y install build-essential asciidoc binutils bzip2 gawk gettext git libncurses5-dev libz-dev patch unzip zlib1g-dev lib32gcc1 libc6-dev-i386 subversion flex uglifyjs git-core gcc-multilib p7zip p7zip-full msmtp libssl-dev texinfo libglib2.0-dev xmlto qemu-utils upx libelf-dev autoconf automake libtool autopoint device-tree-compiler wget
-      - name: Set 3rd packages
-        run: |
-          # git clone https://github.com/RealKiro/Actions-OpenWrt.git package/mine/Actions-OpenWrt
-          # git clone https://github.com/frainzy1477/luci-app-ssr-plus-jo.git package/mine/luci-app-ssr-plus-jo
-          # ssr-plus-jo
-          # git clone https://github.com/Ameykyl/luci-app-ssr-plus-jo.git package/mine/luci-app-ssr-plus-jo/luci-app-ssr-plus-jo
-          # git clone https://github.com/Ameykyl/my.git package/mine/luci-app-ssr-plus-jo/my
-          cd package
-          mkdir openwrt-packages
-          cd openwrt-packages
-          git clone https://github.com/openwrt-develop/luci-theme-atmaterial.git
-          # git clone https://github.com/Ameykyl/luci-app-koolproxyR
-          git clone https://github.com/rosywrt/luci-theme-rosy
-          
+  
       - name: Load custom configuration
         run: |
           # [ -e files ] && mv files openwrt/files
@@ -43,19 +33,20 @@ jobs:
           chmod +x $DIY_SH
           # cd lede
           ./$DIY_SH
-          make defconfig
-        
+          # make defconfig
+      
       - name: Prepare Build
         run: |
+          ./scripts/feeds clean
           ./scripts/feeds update -a
           ./scripts/feeds install -a
           cp x86.config .config
           make defconfig
-          # sed -i 's|^TARGET_|# TARGET_|g; s|# TARGET_DEVICES += x64 64bit|TARGET_DEVICES += x64 64bit|' target/linux/x86/image/Makefile
+          sed -i 's|^TARGET_|# TARGET_|g; s|# TARGET_DEVICES += phicomm-k3|TARGET_DEVICES += phicomm-k3|' target/linux/bcm53xx/image/Makefile
       - name: Build Image
         run: make -j$(nproc) V=s
       - name: Upload Image
         uses: actions/upload-artifact@v1
         with:
-          name: lede-x86-${{ github.sha }}
+          name: lede-x86-no-vssr-${{ github.sha }}
           path: bin
