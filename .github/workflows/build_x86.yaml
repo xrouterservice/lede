@@ -1,6 +1,6 @@
 name: Build_x86
 
-on: 
+#on: 
   #push:
   #  branches: 
   #    - master
