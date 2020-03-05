@@ -139,12 +139,12 @@ jobs:
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
           # CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_V2ray=y
-          CONFIG_PACKAGE_luci-app-ttyd=y
+          # CONFIG_PACKAGE_luci-app-ttyd=y
           # CONFIG_PACKAGE_luci-app-v2ray-server=y
           # CONFIG_PACKAGE_luci-app-verysync=y
           # CONFIG_PACKAGE_luci-app-webadmin=y
           # CONFIG_PACKAGE_luci-app-wireguard=y
-          CONFIG_PACKAGE_luci-app-wrtbwmon=y
+          # CONFIG_PACKAGE_luci-app-wrtbwmon=y
           # EOF
           # LuCI主题:
           # cat >> .config <<EOF
@@ -153,7 +153,7 @@ jobs:
           # EOF
           # 常用软件包:
           #cat >> .config <<EOF
-          CONFIG_PACKAGE_curl=y
+          # CONFIG_PACKAGE_curl=y
           # CONFIG_PACKAGE_htop=y
           # CONFIG_PACKAGE_nano=y
           # CONFIG_PACKAGE_screen=y
@@ -206,6 +206,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-aria2=y
           CONFIG_PACKAGE_luci-i18n-aria2-zh-cn=y
           CONFIG_PACKAGE_ariang=y
+          CONFIG_PACKAGE_luci-app-ttyd=y
 
           CONFIG_PACKAGE_luci-app-syncdial=y
 
@@ -240,6 +241,7 @@ jobs:
           CONFIG_PACKAGE_ip6tables-mod-nat=y
           CONFIG_PACKAGE_rpcd-mod-file=y
           CONFIG_PACKAGE_uhttpd-mod-ubus=y
+          CONFIG_PACKAGE_curl=y
 
           CONFIG_PACKAGE_libfdisk=y
           CONFIG_PACKAGE_fdisk=y
@@ -254,6 +256,7 @@ jobs:
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_Kcptun=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Socks=y
           CONFIG_PACKAGE_luci-app-ssr-plus_INCLUDE_ShadowsocksR_Server=y
+          EOF
           ####################################### 
           # 取消编译VMware镜像以及镜像填充 (不要删除被缩进的注释符号):
           # cat >> .config <<EOF
