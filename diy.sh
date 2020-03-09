@@ -57,7 +57,7 @@ git clone https://github.com/ElonH/Rclone-OpenWrt.git package/mine/Rclone-OpenWr
 # x86
 #git clone https://github.com/project-openwrt/luci-app-frps.git package/mine/luci-app-frps
 # arm
-git clone https://github.com/vseal001/luci-app-frps-arm package/mine/luci-app-frps-arm
+git clone https://github.com/vseal001/luci-app-frps-arm.git package/mine/luci-app-frps-arm
 git clone https://github.com/kuoruan/openwrt-frp.git  package/mine/frp
 
 # luci-app-koolddns
