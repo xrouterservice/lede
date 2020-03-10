@@ -76,6 +76,7 @@ git clone https://github.com/vernesong/OpenClash.git package/mine/OpenClash
 
 #luci-app-dnspod
 # git clone https://github.com/bdhjiajia/luci-app-dnspod.git package/mine/luci-app-dnspod
+# git clone https://github.com/ntlf9t/luci-app-dnspod.git package/mine/luci-app-dnspod
 
 #luci-app-vssr
 #git clone https://github.com/Leo-Jo/luci-app-vssr.git package/mine/luci-app-vssr
