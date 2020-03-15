@@ -8,7 +8,14 @@
 #03-04: 解决部分地区（如广东浙江）出错问题
 #03-02: 修复 Padavan 等精简命令环境执行出错问题
 #02-29: 第一版
-
+#原帖地址 https://www.right.com.cn/forum/thread-3075523-1-1.html一键脚本
+#curl -sk https://gitlab.com/snippets/1946121/raw | sh
+#复制代码
+#加入 cron 任务实现全自动化
+#*/30 * * 2-6 * curl -sk https://gitlab.com/snippets/1946121/raw | sh
+#复制代码
+#作者源代码并没有删除，经测试江苏电信还能用，且用且珍惜吧。
+#
 #__终端彩色标记__
 C_YELL="\033[33m"
 C_REDD="\033[31m"
